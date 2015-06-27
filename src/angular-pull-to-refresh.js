@@ -146,7 +146,6 @@ angular.module('mgcrea.pullToRefresh', [])
                 top = -transform.replace(/translateY\(['"]?([\d.]+)px['"]?\)/i, "$1");
               }
             }
-            console.log(top < -config.treshold && !shouldReload, top, -config.treshold, !shouldReload)
             if(top < -config.treshold && !shouldReload) {
               setStatus('release');
             } else if(top > -config.treshold && shouldReload) {
